@@ -1,0 +1,19 @@
+# Lido pelo Cloudflare Pages e pelo Netlify
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Fotos e vídeos: cache longo. Para trocar um arquivo, mude o nome.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML, CSS e JS revalidam (o ?v=N nos links resolve o resto)
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/styles.css
+  Cache-Control: public, max-age=0, must-revalidate
+/app.js
+  Cache-Control: public, max-age=0, must-revalidate
